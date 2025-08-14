@@ -43,9 +43,29 @@ console.log(arrty); //code returns the array that the last value (chefLalaLiao) 
 
 //shift() remove the beginning of an array
 arrty.shift();
-console.log(arrty);//code returns : [ 'shrimp', 'herb', 'Lime', 'chilli', 'delicious']
+console.log(arrty); //code returns : [ 'shrimp', 'herb', 'Lime', 'chilli', 'delicious']
 
 
+//copying and cloning array in JS
+//using method slice() to copy an array in JS
+let arrtycopy = arrty.slice();
+console.log(arrtycopy); //code returns : [ 'shrimp', 'herb', 'Lime', 'chilli', 'delicious']
+console.log(arrty === arrtycopy); //code returns : false, not the same references or array
 
 
+//How to determine if a Value is an Array in JS?
+Array.isArray() //static method
+const arr = [1,2,3,4]
+Array.isArray(arr) //code must returns true
+
+//Array destructing in JS
+//New sytax to extract multiples elements from array
+let shrimp = arrty[0];
+let herb = arrty[1];
+
+//more shortcut way : array destructuring
+let [tomato, mushroom, carrot] = ['tmt','msh','crt']
+console.log(tomato,mushroom,carrot) //code returns : tmt msh crt
+
+//How to assign a default value to a variable?
 
