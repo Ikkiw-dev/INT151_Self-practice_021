@@ -69,3 +69,89 @@ console.log(tomato,mushroom,carrot) //code returns : tmt msh crt
 
 //How to assign a default value to a variable?
 
+//examples :
+const [tomatoes, mushrooms = 'mshs'] = ['tmts']
+console.log(mushrooms) //code returns : undefined, not have any value assigned to it (before self-assigned value)
+
+//destructuring it self by assign value to it, after that the value of mushrooms will turns to the value that have assigned
+
+//skipping a value in an array
+const [a, ,c] = ['ant','bird','cat']
+
+//Spreaad, Rest Operator
+const [d,e,...f] = ['dof','elephant','fish','giraffe','horse','intelligence','jaguar']
+console.log(f); //code returns : [ 'fish', 'giraffe', 'horse', 'intelligence', 'jaguar' ]
+
+const alpha = ['dof','elephant','fish','giraffe','horse','intelligence','jaguar']
+const alphacopy = [...alpha]; //all the element come, mean like create new array
+console.log(alphacopy); //same array
+console.log(alpha === alphacopy); //turn false, not same references
+
+//Desturcturing Use cases in JS - swap
+let first = 1;
+let second = 2;
+
+[first,second] = [second,first];
+
+console.log(first); //code returns : 2
+console.log(second); //code returns : 1
+
+//Merge the array with spread operator
+let emotion = ['sad','happy'];
+let veggies = ['broccoli','tomatoes','corn','carrot'];
+
+let emoveg = [...emotion, ...veggies];
+console.log(emoveg); //code returns : [ 'sad', 'happy', 'broccoli', 'tomatoes', 'corn', 'carrot' ]
+
+//The array length property
+const arrnum = [11,27,73];
+const arrnum2 = new Array(7);
+arrnum.length
+console.log(arrnum.length); //code returns : 3
+console.log(arrnum2.length); //code returns : 7
+
+//The concat() method
+let firstarr = [1,2,3];
+let secarr = [4,5,6];
+let merged = firstarr.concat(secarr);
+console.log(merged); //code returns : [ 1, 2, 3, 4, 5, 6 ]
+
+//not limit the quanitity of array that can concat (arr1,arr2,...arrN)
+
+//The join() method
+let bread = ['pie','chiffon','cake','rum']
+let breadjoin = bread.join();
+console.log(breadjoin); // returns : pie,chiffon,cake,rum
+let breadjoin2 = bread.join(' and ');
+console.log(breadjoin2); //returns : pie and chiffon and cake and rum
+
+//The fill() method
+let colors = ['blue','green','yellow']
+let fill = colors.fill("pink");
+console.log(fill); //code returns : [ 'pink', 'pink', 'pink' ]
+
+//The includes() method
+let name = ['bob','john','peter','alex'];
+console.log(name.includes('tom')); //false
+console.log(name.includes('bob')); //true
+
+//The indexOf() method
+name.indexOf('alex'); // 1
+name.indexOf('rob'); // -1
+//lastIndexOf()
+
+//The reverse() method
+let names = ['bob','john','peter','alex'];
+console.log(names.reverse()) //returns : [ 'alex', 'peter', 'john', 'bob' ]
+
+//The sort() method
+// The default sort() method converts the element types into strings
+
+
+
+
+
+
+
+
+
