@@ -1,3 +1,4 @@
+//Doing Practices that given by Aj. Umaporn
 //1 : addProperty sol.
 function addProperty (obj,key,value) {
     obj[key] = value; //add new property
@@ -96,3 +97,61 @@ function convertToUppercase (arr) {
    return res;
 }
 console.log(convertToUppercase(['hello','world']))
+
+//9. findmax
+function findMax (arr) {
+    let fmax = Math.max(...arr);
+    return fmax;
+}
+console.log(findMax([1,2,3,4]))
+
+//10. remove falsy value
+function removeFalsyValues (arr) {
+    let myfilter = arr.filter(Boolean)
+
+    return myfilter;
+}
+console.log(removeFalsyValues([0,1,false,2,"",3]))
+
+//11. doubleAndFilterEvenNumbers function
+function doubleAndFilterEvenNumbers (arr) {
+    let filtereven = arr.filter((e) => {return e % 2 == 0});
+    let double = filtereven.map(num => num * 2);
+
+    return double;
+}
+
+console.log(doubleAndFilterEvenNumbers([1,2,3,4]));
+
+//12. filterEvenNumbers
+function filterEvenNumbers (arr) {
+    let filt = arr.filter((e) => {return e % 2 == 0});
+
+    return filt;
+}
+console.log(filterEvenNumbers([1,2,3,4]));
+
+//13. populateArray
+function populateArray (length,value) {
+    let rearr = new Array(length).fill(value);
+
+    return rearr;
+}
+console.log(populateArray(3,'a'));
+
+//14. squarenum
+function squareNumbers (arr) {
+    let sqarr = arr.map(num => num ** 2);
+    return sqarr;
+}
+console.log(squareNumbers([1,2,3,4]));
+
+//15. processNumbers
+function processNumbers (arr) {
+    return arr
+        .map((n) => n * n)
+        .filter((n) => n % 2 !== 0)
+        .reduce((sum, n) => sum + n, 0);
+}
+console.log(processNumbers([1,2,3,4]));
+console.log(processNumbers([5,6,7,8]));
