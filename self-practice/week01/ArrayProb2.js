@@ -16,9 +16,9 @@ function arrpos (positives) {
     for (let i = positives.length-1; i >= 0; i--) {
         if (positives[i] > 0) continue
         positives.splice(i,1)
-        count++;
+        count ++;
     }
-    return count
+    return count;
 }
 let p = [-40, 30, 80, -20, -40, 50]
 console.log(arrpos(p));
